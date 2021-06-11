@@ -1,0 +1,329 @@
+/* INDHOLDSFORTEGNELSE */
+
+/* 
+
+.BURGERMENU
+.LAYOUT
+.FOOTER 
+
+*/
+
+/* ////////// BURGER MENU ///////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+#menu {
+  /* position: absolut gør elementets placerering relativt til den nærmeste parent som ikke har position: static (static er default på alle elementer). Her er den relativ ifht "header", da den er position: sticky.  */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  /* ÆNDRET width til vw fra % da der var en gul streg i venstre side. Dont ask why :) */
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+
+  transition: transform 0.3s;
+  transform: translatex(100%);
+}
+#menu.hidden {
+  opacity: 0;
+  display: none;
+}
+#menu.open {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#menu a {
+  font-family: "Tinos", serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1.7rem;
+  display: block;
+}
+
+#burger_btn {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  /* ÆNDRET  slettet flex */
+}
+
+.stroke {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: blue;
+
+  top: calc(50% - 1.5px);
+  left: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.stroke.top {
+  transform: translateY(-10px);
+}
+
+.stroke.bottom {
+  transform: translateY(10px);
+}
+
+#burger_btn.open .stroke.top {
+  transform: translateY(0) rotate(45deg);
+}
+
+#burger_btn.open .stroke.center {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+#burger_btn.open .stroke.bottom {
+  transform: translateY(0) rotate(-45deg);
+}
+
+nav ul li img {
+  visibility: hidden;
+  width: 0%;
+}
+
+/* ////////// BURGER MENU END ///////// */
+
+/* ////////// LAYOUT ///////// */
+
+.hrtext{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+}
+
+ .hr1, .hr2 {
+  content: "";
+  background-color: white;
+  width: 472px;
+  height: 2px;
+  margin-inline: 1rem;
+  margin-top: 25px;
+
+}
+
+#sectioncolor {
+  background-color: blue;
+  padding: 0px;
+}
+
+.sectionwrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+h2 {
+  color: white;
+  font-family: "Tinos", serif;
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px;
+}
+
+.colmumn_left {
+  display: flex;
+  flex-wrap: wrap;
+  height: inherit;
+}
+
+.column_text p {
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  color: blue;
+  font-family: "Tinos", serif;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.knap {
+  padding: 20px;
+  display: flex;
+}
+
+.knap a {
+  color: white;
+}
+
+.knap1 {
+  margin: 10px;
+}
+
+.knap2 {
+  margin: 10px;
+}
+
+
+img {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+button {
+  display: flex;
+  background-color: blue;
+  padding: 0.5rem 3rem;
+  border: solid 2px white;
+}
+
+/* ////////// LAYOUT END ///////// */
+
+/* ////////// FOOTER ///////// */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+  font-family: "Tinos", serif;
+  font-size: 0.75rem;
+  color: blue;
+  background-color: white;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ////////// FOOTER END ///////// */
+/* ////////// MEDIA HELVEDE ///////// */
+@media (min-width: 768px) {
+  .sectionwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+/* ////////// BURGER BØRN BILLEDER ///////// */
+nav ul li img {
+  visibility: visible;
+  width: 100%;
+}
+
+nav ul li:first-child{
+  display: flex;
+}
+nav ul li:first-child img{
+  width: 5rem;
+}
+
+nav ul li:nth-child(2){
+  display: flex;
+}
+nav ul li:nth-child(2) img{
+  width: 5rem;
+}
+
+nav ul li:nth-child(3){
+  display: flex;
+}
+nav ul li:nth-child(3) img{
+  width: 5rem;
+}
+
+nav ul li:nth-child(4){
+  display: flex;
+}
+nav ul li:nth-child(4) img{
+  width: 5rem;
+}
+
+nav ul li:nth-child(5){
+  display: flex;
+}
+nav ul li:nth-child(5) img{
+  width: 5rem;
+}
+
+nav ul li:last-child{
+  display: flex;
+}
+nav ul li:last-child img{
+  width: 5rem; 
+}
+
+header nav {
+  padding: 40px;
+} 
+
+
+#menu{
+  background-color: white;
+  padding: 0px;
+  align-items: flex-start;
+  position: relative;
+  height: 50vh;
+  width: 32vh;
+  transition: 0.3s;
+}
+
+#menu a {
+color: blue;
+padding: 0px 10px;
+line-height: 3;
+}
+
+.bla {
+  background-color: blue;
+  width: 195px;
+}
+
+#menu li .bla a {
+  color: white;
+}
+
+}
+
+@media (min-width: 1000px) {
+  p{
+    width: 60ch;
+}
+}
+/* ////////// MEDIA HELVEDE END ///////// */
