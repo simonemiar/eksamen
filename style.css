@@ -312,27 +312,12 @@ video{
   width: 100%;
 }
 
+/* ////////// FJERN SPILLET I MOBIL ///////// */
+
 .sectioncolor_spil{
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  background-color: blue;
+  display: none;
 }
-
-.spilwrapper{
-  margin: 0 auto;
-  width: ;
-}
-
-#iframe_spil{
-  border-width: 0;
-  border-style: none;
-  border-color: transparent;
-  border-image: none;
-  width: 100vh;
-  height: 800px;
-}
-
+/* ////////// FJERN SPILLET I MOBIL ///////// */
 
 /* ////////// MEDIA HELVEDE ///////// */
 @media (min-width: 768px) {
@@ -428,6 +413,7 @@ nanavbarv ul li:last-child{
 navbar ul li:last-child img{
   width: 5rem; 
 }
+/* ///////BURGER BØRN END///////// */
 
 header navbar {
   padding: 40px;
@@ -477,6 +463,27 @@ line-height: 3;
   }
 .knap {
   display: flex;
+}
+
+.sectioncolor_spil{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: blue;
+}
+
+.spilwrapper{
+  margin: 0 auto;
+  width: ;
+}
+
+#iframe_spil{
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
+  border-image: none;
+  width: 100vh;
+  height: 800px;
 }
 
 }
