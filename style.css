@@ -210,12 +210,12 @@ position: sticky;
  .hr1, .hr2 {
   content: "";
   background-color: white;
-  width: 472px;
+  width: 100vw;
   height: 2px;
-  margin-inline: 1rem;
+  margin-inline: 7rem;
   margin-top: 25px;
-
 }
+
 
 #sectioncolor {
   background-color: blue;
@@ -281,7 +281,7 @@ img {
 }
 
 
-button {
+.button {
   display: flex;
   background-color: blue;
   padding: 0.5rem 3rem;
@@ -368,7 +368,7 @@ video{
   color: blue;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   justify-content: center;
   }
@@ -446,6 +446,13 @@ line-height: 3;
   display: flex;
   justify-content: center;
   padding: 2rem;
+}
+
+.hvid{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbarLinks li .bla a {
