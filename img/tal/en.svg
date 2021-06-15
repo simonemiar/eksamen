@@ -1,1 +1,13 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#0024ff;}</style></defs><circle class="cls-1" cx="7.5" cy="7.5" r="6"/><path class="cls-2" d="M7.5,2A5.5,5.5,0,1,1,2,7.5,5.51,5.51,0,0,1,7.5,2m0-1A6.5,6.5,0,1,0,14,7.5,6.5,6.5,0,0,0,7.5,1Z"/><path class="cls-2" d="M9.44,7.08l.09-.91h.34V9.11H9.53L9.44,8.2H5.49l.3.91H5.46L4.59,7.63V7.08Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#0024FF;}
+</style>
+<circle class="st0" cx="7.5" cy="7.5" r="6"/>
+<path class="st1" d="M13,7.5c0,3-2.5,5.5-5.5,5.5S2,10.5,2,7.5S4.5,2,7.5,2C10.5,2,13,4.5,13,7.5 M14,7.5C14,3.9,11.1,1,7.5,1
+	S1,3.9,1,7.5S3.9,14,7.5,14S14,11.1,14,7.5z"/>
+<path class="st1" d="M7.9,9.4l0.9,0.1v0.3H5.9V9.5l0.9-0.1V5.5L5.9,5.8V5.5l1.5-0.9h0.6V9.4z"/>
+</svg>

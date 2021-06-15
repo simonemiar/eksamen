@@ -25,104 +25,176 @@ a {
 
 header {
   background-color: white;
-  position: sticky;
   top: 0;
   left: 0;
 }
 
-header nav {
+header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
+}
+
+h1{
+  font-size: 2em;
+  color: white;
+  font-family: "Tinos", serif;
+  text-align: center;
 }
 
 p {
   font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
 }
 
-#menu {
-  /* position: absolut gør elementets placerering relativt til den nærmeste parent som ikke har position: static (static er default på alle elementer). Her er den relativ ifht "header", da den er position: sticky.  */
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100vw;
-  /* ÆNDRET width til vw fra % da der var en gul streg i venstre side. Dont ask why :) */
-  height: 100vh;
-  background-color: blue;
+.forsidewrapper{
+  height: 50vh;
+  margin: 0 auto;
+}
+
+
+/* ////////// FOOTER ///////// */
+
+body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 20px;
-
-  transition: transform 0.3s;
-  transform: translatex(100%);
-}
-#menu.hidden {
-  opacity: 0;
-  display: none;
-}
-#menu.open {
-  display: block;
-  opacity: 1;
-  transform: translateX(0);
 }
 
-#menu a {
+footer {
+  text-align: center;
   font-family: "Tinos", serif;
-  color: white;
-  font-weight: 700;
-  font-size: 1.7rem;
-  display: block;
+  font-size: 0.75rem;
+  color: blue;
+  background-color: white;
+  padding: 20px;
+  margin-top: auto;
 }
 
-#burger_btn {
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  position: relative;
+/* ////////// FOOTER END ///////// */
+/* ////////// BURGER MENU ///////// */
+
+
+.burgerButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
-  /* ÆNDRET  slettet flex */
+  z-index: 100;
 }
 
-.stroke {
+
+
+.streg1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-0.5rem);
+
   width: 100%;
   height: 3px;
-  position: absolute;
   background-color: blue;
-
-  top: calc(50% - 1.5px);
-  left: 0;
-  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 10px;
+  transition: transform 1s;
 }
-
-.stroke.top {
-  transform: translateY(-10px);
-}
-
-.stroke.bottom {
-  transform: translateY(10px);
-}
-
-#burger_btn.open .stroke.top {
-  transform: translateY(0) rotate(45deg);
-}
-
-#burger_btn.open .stroke.center {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-#burger_btn.open .stroke.bottom {
+.streg1.aktiv {
   transform: translateY(0) rotate(-45deg);
 }
 
-nav ul li img {
+.streg2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+
+.streg2.aktiv {
+  opacity: 0;
+}
+
+.streg3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0.5rem);
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+.streg3.aktiv {
+  transform: translateY(0) rotate(45deg);
+}
+
+/************** Navbar ****************/
+
+navbar ul li img {
   visibility: hidden;
   width: 0%;
 }
 
+.navbar {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+position: sticky;
+  list-style: none;
+  flex-direction: column;
+
+}
+
+.navbar .navbarLinks {
+  position: fixed;
+  top: 48.5px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.navbar .navbarLinks.aktiv {
+  display: block;
+  background-color: blue;
+}
+
+.navbar .navbarLinks li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.navbar .navbarLinks li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Tinos", serif;
+  font-size: 1.5rem;
+}
+
+.navbar .navbarLinks li a:hover {
+  color:rgba(0, 0, 255, 0.486);
+}
 /* ////////// BURGER MENU END ///////// */
 
 /* ////////// LAYOUT ///////// */
@@ -157,6 +229,9 @@ nav ul li img {
   flex-wrap: wrap;
 }
 
+.sectionwrapper img{
+width: 100%;
+}
 
 h2 {
   color: white;
@@ -185,8 +260,7 @@ h2 {
 }
 
 .knap {
-  padding: 20px;
-  display: flex;
+  padding: 2em;
 }
 
 .knap a {
@@ -194,18 +268,18 @@ h2 {
 }
 
 .knap1 {
-  margin: 10px;
+  margin: 1em;
 }
 
 .knap2 {
-  margin: 10px;
+  margin: 1em;
 }
-
 
 img {
-  width: 100%;
+  width: 0%;
   padding: 0px 20px;
 }
+
 
 button {
   display: flex;
@@ -216,107 +290,186 @@ button {
 
 /* ////////// LAYOUT END ///////// */
 
-/* ////////// FOOTER ///////// */
+.interview {
+  object-fit: cover;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  max-width: 80vw;
+  margin: 0 auto;
+  justify-content: center;
+}
 
-body {
-  min-height: 100vh;
+.column_left_interview{
+  object-fit: cover;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  max-width: 100vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+video{
+  width: 100%;
+}
+
+.sectioncolor_spil{
   display: flex;
   flex-direction: column;
+  align-items: center; 
+  background-color: blue;
 }
 
-footer {
-  text-align: center;
-  font-family: "Tinos", serif;
-  font-size: 0.75rem;
-  color: blue;
-  background-color: white;
-  padding: 20px;
-  margin-top: auto;
+.spilwrapper{
+  margin: 0 auto;
+  width: ;
 }
 
-/* ////////// FOOTER END ///////// */
+#iframe_spil{
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
+  border-image: none;
+  width: 100vh;
+  height: 800px;
+}
+
+
 /* ////////// MEDIA HELVEDE ///////// */
 @media (min-width: 768px) {
+  /* DESKTOP VERSION */
+  .navbar ul {
+    flex-direction: row;
+    height: 40vh;
+  }
+
+  .burgerButton {
+    display: none;
+  }
+
+  img {
+  width: 100%;
+  padding: 0px 20px;
+  }
+
+  h1{
+  font-size: 6rem;
+  }
+
+  .navbar .navbarLinks {
+    position: static;
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+
+
+  .navbar .navbarLinks li a {
+  text-decoration: none;
+  color: blue;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  }
+  .navbar .navbarLinks.aktiv {
+  text-decoration: none;
+  background-color: white;
+  }
+
   .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 /* ////////// BURGER BØRN BILLEDER ///////// */
-nav ul li img {
+navbar ul li img {
   visibility: visible;
   width: 100%;
 }
 
-nav ul li:first-child{
+navbar ul li:first-child{
   display: flex;
 }
-nav ul li:first-child img{
+navbar ul li:first-child img{
   width: 5rem;
 }
 
-nav ul li:nth-child(2){
+navbar ul li:nth-child(2){
   display: flex;
 }
-nav ul li:nth-child(2) img{
+navbar ul li:nth-child(2) img{
   width: 5rem;
 }
 
-nav ul li:nth-child(3){
+navbar ul li:nth-child(3){
   display: flex;
 }
-nav ul li:nth-child(3) img{
+navbar ul li:nth-child(3) img{
   width: 5rem;
 }
 
-nav ul li:nth-child(4){
+navbar ul li:nth-child(4){
   display: flex;
 }
-nav ul li:nth-child(4) img{
+navbar ul li:nth-child(4) img{
   width: 5rem;
 }
 
-nav ul li:nth-child(5){
+navbar ul li:nth-child(5){
   display: flex;
 }
-nav ul li:nth-child(5) img{
+navbar ul li:nth-child(5) img{
   width: 5rem;
 }
 
-nav ul li:last-child{
+nanavbarv ul li:last-child{
   display: flex;
 }
-nav ul li:last-child img{
+navbar ul li:last-child img{
   width: 5rem; 
 }
 
-header nav {
+header navbar {
   padding: 40px;
 } 
 
-
-#menu{
-  background-color: white;
-  padding: 0px;
-  align-items: flex-start;
-  position: relative;
-  height: 50vh;
-  width: 32vh;
-  transition: 0.3s;
-}
-
-#menu a {
+navbar a {
 color: blue;
 padding: 0px 10px;
 line-height: 3;
+
 }
 
 .bla {
   background-color: blue;
-  width: 195px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-#menu li .bla a {
+.navbarLinks li .bla a {
   color: white;
+}
+.navbar .navbarLinks li .bla a:hover {
+  color: white;
+}
+
+.navcolor {
+    background-color: white;
+  }
+
+.navcolor li a {
+    color: blue;
+  }
+
+  .portfoliologo{
+    margin-bottom: auto;
+    display: block;
+
+  }
+.knap {
+  display: flex;
 }
 
 }
@@ -325,5 +478,8 @@ line-height: 3;
   p{
     width: 60ch;
 }
+
+
+
 }
 /* ////////// MEDIA HELVEDE END ///////// */
