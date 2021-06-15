@@ -249,7 +249,7 @@ h2 {
 
 .column_text p {
   color: white;
-  padding: 20px;
+  padding: 7px;
 }
 
 .logo {
@@ -301,9 +301,8 @@ img {
 
 .column_left_interview{
   object-fit: cover;
-  display: flex;
   aspect-ratio: 16 / 9;
-  max-width: 100vw;
+  max-width: 100%;
   margin: 0 auto;
   justify-content: center;
 }
@@ -324,7 +323,7 @@ video{
   /* DESKTOP VERSION */
   .navbar ul {
     flex-direction: row;
-    height: 40vh;
+    height: 38vh;
   }
 
   .burgerButton {
@@ -439,6 +438,7 @@ line-height: 3;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 2rem;
 }
 
 .navbarLinks li .bla a {
