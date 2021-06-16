@@ -1,14 +1,21 @@
 /* INDHOLDSFORTEGNELSE */
 
 /* 
-
+.VARIABEL
+.START
 .BURGERMENU
 .LAYOUT
 .FOOTER 
-
 */
 
-/* ////////// BURGER MENU ///////// */
+/**************  VARIABEL ****************/
+:root {
+  --main-bg-color: blue;
+}
+
+/**************  VARIABEL END ****************/
+/**************  START ****************/
+
 * {
   margin: 0;
   padding: 0;
@@ -52,9 +59,8 @@ p {
   height: 50vh;
   margin: 0 auto;
 }
-
-
-/* ////////// FOOTER ///////// */
+/**************  START END ****************/
+/**************  FOOTER ****************/
 
 body {
   min-height: 100vh;
@@ -65,16 +71,15 @@ body {
 footer {
   text-align: center;
   font-family: "Tinos", serif;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   color: blue;
   background-color: white;
   padding: 20px;
   margin-top: auto;
 }
 
-/* ////////// FOOTER END ///////// */
-/* ////////// BURGER MENU ///////// */
-
+/**************  FOOTER END ****************/
+/**************  BURGER MENU ****************/
 
 .burgerButton {
   position: absolute;
@@ -88,8 +93,6 @@ footer {
   cursor: pointer;
   z-index: 100;
 }
-
-
 
 .streg1 {
   position: absolute;
@@ -133,8 +136,8 @@ footer {
 .streg3.aktiv {
   transform: translateY(0) rotate(45deg);
 }
-
-/************** Navbar ****************/
+/************** BURGER MENU ****************/
+/************** NAVBAR ****************/
 
 navbar ul li img {
   visibility: hidden;
@@ -189,15 +192,14 @@ position: sticky;
   text-decoration: none;
   color: white;
   font-family: "Tinos", serif;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .navbar .navbarLinks li a:hover {
   color:rgba(0, 0, 255, 0.486);
 }
-/* ////////// BURGER MENU END ///////// */
-
-/* ////////// LAYOUT ///////// */
+/************** BURGER MENU END ****************/
+/************** LAYOUT ****************/
 
 .hrtext{
   display: flex;
@@ -237,7 +239,7 @@ h2 {
   color: white;
   font-family: "Tinos", serif;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 20px;
 }
 
@@ -255,7 +257,7 @@ h2 {
 .logo {
   color: blue;
   font-family: "Tinos", serif;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   text-align: left;
 }
 
@@ -265,14 +267,11 @@ h2 {
 
 .knap a {
   color: white;
+  text-align: center;
 }
 
-.knap1 {
-  margin: 1em;
-}
-
-.knap2 {
-  margin: 1em;
+.knap a:hover {
+  color:rgba(255, 255, 255, 0.527);
 }
 
 img {
@@ -288,7 +287,7 @@ img {
   border: solid 2px white;
 }
 
-/* ////////// LAYOUT END ///////// */
+/************** LAYOUT END ****************/
 
 .interview {
   object-fit: cover;
@@ -311,14 +310,13 @@ video{
   width: 100%;
 }
 
-/* ////////// FJERN SPILLET I MOBIL ///////// */
+/************** FJERN SPILLET I MOBIL  ****************/
 
 .sectioncolor_spil{
   display: none;
 }
-/* ////////// FJERN SPILLET I MOBIL ///////// */
-
-/* ////////// MEDIA HELVEDE ///////// */
+/************** FJERN SPILLET I MOBIL END ****************/
+/************** MEDIA HELVEDE ****************/
 @media (min-width: 768px) {
   /* DESKTOP VERSION */
   .navbar ul {
@@ -336,7 +334,7 @@ video{
   }
 
   h1{
-  font-size: 6rem;
+  font-size: 6em;
   }
 
   .navbar .navbarLinks {
@@ -365,7 +363,7 @@ video{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-/* ////////// BURGER BØRN BILLEDER ///////// */
+/************** BURGER BØRN BILLEDER ****************/
 navbar ul li img {
   visibility: visible;
   width: 100%;
@@ -412,7 +410,7 @@ nanavbarv ul li:last-child{
 navbar ul li:last-child img{
   width: 5rem; 
 }
-/* ///////BURGER BØRN END///////// */
+/************** BURGER BØRN END ****************/
 
 header navbar {
   padding: 40px;
@@ -483,7 +481,7 @@ line-height: 3;
   border-color: transparent;
   border-image: none;
   width: 100vh;
-  height: 800px;
+  height: 450px;
 }
 
 }
@@ -496,4 +494,4 @@ line-height: 3;
 
 
 }
-/* ////////// MEDIA HELVEDE END ///////// */
+/************** MEDIA HELVEDE END ****************/
