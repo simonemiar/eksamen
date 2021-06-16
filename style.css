@@ -10,7 +10,8 @@
 
 /**************  VARIABEL ****************/
 :root {
-  --main-bg-color: blue;
+  --blue: blue;
+  --white: white;
 }
 
 /**************  VARIABEL END ****************/
@@ -31,7 +32,7 @@ a {
 }
 
 header {
-  background-color: white;
+  background-color: var(--white);
   top: 0;
   left: 0;
 }
@@ -45,7 +46,7 @@ header .navbar {
 
 h1{
   font-size: 2em;
-  color: white;
+  color: var(--white);
   font-family: "Tinos", serif;
   text-align: center;
 }
@@ -72,8 +73,8 @@ footer {
   text-align: center;
   font-family: "Tinos", serif;
   font-size: 0.75em;
-  color: blue;
-  background-color: white;
+  color: var(--blue);
+  background-color: var(--white);
   padding: 20px;
   margin-top: auto;
 }
@@ -101,7 +102,7 @@ footer {
 
   width: 100%;
   height: 3px;
-  background-color: blue;
+  background-color: var(--blue);
   border-radius: 10px;
   transition: transform 1s;
 }
@@ -114,7 +115,7 @@ footer {
   top: 50%;
   width: 100%;
   height: 3px;
-  background-color: blue;
+  background-color: var(--blue);
   border-radius: 10px;
   transition: transform 1s;
 }
@@ -129,7 +130,7 @@ footer {
   transform: translateY(0.5rem);
   width: 100%;
   height: 3px;
-  background-color: blue;
+  background-color: var(--blue);
   border-radius: 10px;
   transition: transform 1s;
 }
@@ -153,7 +154,7 @@ navbar ul li img {
   margin: 0;
   width: 100%;
   height: 60px;
-  background-color: white;
+  background-color: var(--white);
   height: auto;
 }
 
@@ -177,7 +178,7 @@ position: sticky;
 
 .navbar .navbarLinks.aktiv {
   display: block;
-  background-color: blue;
+  background-color: var(--blue);
 }
 
 .navbar .navbarLinks li {
@@ -186,11 +187,12 @@ position: sticky;
   flex-direction: column;
   justify-content: space-between;
   width: 5rem;
+  /* padding: 1rem; */
 }
 
 .navbar .navbarLinks li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-family: "Tinos", serif;
   font-size: 1.5em;
 }
@@ -211,7 +213,7 @@ position: sticky;
 
  .hr1, .hr2 {
   content: "";
-  background-color: white;
+  background-color: var(--white);
   width: 100vw;
   height: 2px;
   margin-inline: 7rem;
@@ -220,7 +222,7 @@ position: sticky;
 
 
 #sectioncolor {
-  background-color: blue;
+  background-color: var(--blue);
   padding: 0px;
 }
 
@@ -236,7 +238,7 @@ width: 100%;
 }
 
 h2 {
-  color: white;
+  color: var(--white);
   font-family: "Tinos", serif;
   text-align: center;
   font-size: 1em;
@@ -250,12 +252,12 @@ h2 {
 }
 
 .column_text p {
-  color: white;
+  color: var(--white);
   padding: 7px;
 }
 
 .logo {
-  color: blue;
+  color: var(--blue);
   font-family: "Tinos", serif;
   font-size: 0.75em;
   text-align: left;
@@ -266,7 +268,7 @@ h2 {
 }
 
 .knap a {
-  color: white;
+  color: var(--white);
   text-align: center;
 }
 
@@ -282,9 +284,9 @@ img {
 
 .button {
   display: flex;
-  background-color: blue;
+  background-color: var(--blue);
   padding: 0.5rem 3rem;
-  border: solid 2px white;
+  border: solid 2px var(--white);
 }
 
 /************** LAYOUT END ****************/
@@ -347,7 +349,7 @@ video{
 
   .navbar .navbarLinks li a {
   text-decoration: none;
-  color: blue;
+  color: var(--blue);
   writing-mode: vertical-lr;
   text-orientation: mixed;
   /* padding: 2rem; */
@@ -356,7 +358,7 @@ video{
   }
   .navbar .navbarLinks.aktiv {
   text-decoration: none;
-  background-color: white;
+  background-color: var(--white);
   }
 
   .sectionwrapper {
@@ -417,14 +419,14 @@ header navbar {
 } 
 
 navbar a {
-color: blue;
+color: var(--blue);
 padding: 0px 10px;
 line-height: 3;
 
 }
 
 .bla {
-  background-color: blue;
+  background-color: var(--blue);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -432,7 +434,7 @@ line-height: 3;
 }
 
 .hvid{
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -440,18 +442,18 @@ line-height: 3;
 }
 
 .navbarLinks li .bla a {
-  color: white;
+  color: var(--white);
 }
 .navbar .navbarLinks li .bla a:hover {
-  color: white;
+  color: var(--white);
 }
 
 .navcolor {
-    background-color: white;
+    background-color: var(--white);
   }
 
 .navcolor li a {
-    color: blue;
+    color: var(--blue);
   }
 
   .portfoliologo{
@@ -467,12 +469,11 @@ line-height: 3;
   display: flex;
   flex-direction: column;
   align-items: center; 
-  background-color: blue;
+  background-color: var(--blue);
 }
 
 .spilwrapper{
   margin: 0 auto;
-  width: ;
 }
 
 #iframe_spil{
