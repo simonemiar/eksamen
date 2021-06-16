@@ -237,7 +237,7 @@ position: sticky;
   background-color: var(--white);
   width: 100vw;
   height: 2px;
-  margin-inline: 7rem;
+  margin-inline: 1rem;
   margin-top: 25px;
 }
 
@@ -262,7 +262,7 @@ h2 {
   color: var(--white);
   font-family: "Tinos", serif;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 20px;
 }
 
@@ -274,7 +274,7 @@ h2 {
 
 .column_text p {
   color: var(--white);
-  padding: 7px;
+  padding: 20px;
 }
 
 .logo {
@@ -285,7 +285,8 @@ h2 {
 }
 
 .knap {
-  padding: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 .knap a {
@@ -308,7 +309,18 @@ img {
   background-color: var(--blue);
   padding: 0.5rem 3rem;
   border: solid 2px var(--white);
+  margin: 10px;
 }
+
+
+.button_2 {
+  display: flex;
+  background-color: var(--blue);
+  padding: 0.5rem 3rem;
+  border: solid 2px var(--white);
+  margin: 10px;
+}
+
 
 /************** LAYOUT END ****************/
 /************** 7.VIDEO ****************/
@@ -399,7 +411,10 @@ video{
   color: var(--blue);
   padding: 0px 10px;
   line-height: 3;
+  }
 
+  .hr1, .hr2 {
+    margin-inline: 7em;
   }
   /************** LAYOUT END ****************/
   /************** BURGER BØRN BILLEDER ****************/
@@ -491,6 +506,8 @@ video{
   /************** KNAP, SPIL & VIDEO ****************/
   .knap {
     display: flex;
+    justify-content: left;
+    padding-left: 10px;
   }
 
   .sectioncolor_spil{
