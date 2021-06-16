@@ -207,11 +207,11 @@ navbar ul li img {
 }
 
 .bla{
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .hvid{
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 /************** NAVBAR END ****************/
@@ -323,6 +323,7 @@ img {
   display: flex;
   aspect-ratio: 16 / 9;
   max-width: 80vw;
+  max-width: 100vh;
   margin: 0 auto;
   justify-content: center;
 }
