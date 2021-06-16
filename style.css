@@ -245,10 +245,11 @@ navbar ul li img {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 .sectionwrapper img{
-width: 100%;
+  width: 100%;
 }
 
 h2 {
@@ -394,6 +395,7 @@ video{
   .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 70px;
   }
 
   header navbar {
