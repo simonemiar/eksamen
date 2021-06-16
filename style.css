@@ -1,21 +1,34 @@
-/* INDHOLDSFORTEGNELSE */
-
 /* 
-.VARIABEL
-.START
-.BURGERMENU
-.LAYOUT
-.FOOTER 
+
+INDHOLDSFORTEGNELSE 
+
+1.VARIABEL
+2.START
+3.FOOTER
+4.BURGER MENU
+5.NAVBAR
+6.LAYOUT
+7.VIDEO 
+8.SPIL 
+
+MEDIA HELVEDE
+  DESKTOP
+  LAYOUT
+  BURGER BØRN BILLEDER 
+  NAVBAR
+  KNAP, SPIL & VIDEO 
+  CHARACTER WIDTH
+
 */
 
-/**************  VARIABEL ****************/
+/**************  1.VARIABEL ****************/
 :root {
   --blue: blue;
   --white: white;
 }
 
 /**************  VARIABEL END ****************/
-/**************  START ****************/
+/**************  2. START ****************/
 
 * {
   margin: 0;
@@ -61,7 +74,7 @@ p {
   margin: 0 auto;
 }
 /**************  START END ****************/
-/**************  FOOTER ****************/
+/**************  3.FOOTER ****************/
 
 body {
   min-height: 100vh;
@@ -80,7 +93,7 @@ footer {
 }
 
 /**************  FOOTER END ****************/
-/**************  BURGER MENU ****************/
+/**************  4.BURGER MENU ****************/
 
 .burgerButton {
   position: absolute;
@@ -138,7 +151,7 @@ footer {
   transform: translateY(0) rotate(45deg);
 }
 /************** BURGER MENU ****************/
-/************** NAVBAR ****************/
+/************** 5.NAVBAR ****************/
 
 navbar ul li img {
   visibility: hidden;
@@ -187,7 +200,6 @@ position: sticky;
   flex-direction: column;
   justify-content: space-between;
   width: 5rem;
-  /* padding: 1rem; */
 }
 
 .navbar .navbarLinks li a {
@@ -200,8 +212,17 @@ position: sticky;
 .navbar .navbarLinks li a:hover {
   color:rgba(0, 0, 255, 0.486);
 }
-/************** BURGER MENU END ****************/
-/************** LAYOUT ****************/
+
+.bla{
+  padding: 2rem;
+}
+
+.hvid{
+  padding: 2rem;
+}
+
+/************** NAVBAR END ****************/
+/************** 6.LAYOUT ****************/
 
 .hrtext{
   display: flex;
@@ -241,7 +262,7 @@ h2 {
   color: var(--white);
   font-family: "Tinos", serif;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 20px;
 }
 
@@ -290,7 +311,7 @@ img {
 }
 
 /************** LAYOUT END ****************/
-
+/************** 7.VIDEO ****************/
 .interview {
   object-fit: cover;
   display: flex;
@@ -305,22 +326,24 @@ img {
   aspect-ratio: 16 / 9;
   max-width: 100%;
   margin: 0 auto;
-  justify-content: center;
 }
 
 video{
   width: 100%;
 }
-
-/************** FJERN SPILLET I MOBIL  ****************/
+/************** VIDEO END ****************/
+/************** 8.SPIL ****************/
 
 .sectioncolor_spil{
   display: none;
 }
-/************** FJERN SPILLET I MOBIL END ****************/
+/************** SPIL END ****************/
+
+
+
 /************** MEDIA HELVEDE ****************/
 @media (min-width: 768px) {
-  /* DESKTOP VERSION */
+  /************** DESKTOP ****************/
   .navbar ul {
     flex-direction: row;
     height: 38vh;
@@ -360,139 +383,147 @@ video{
   text-decoration: none;
   background-color: var(--white);
   }
+  /************** DESKTOP END ****************/
+  /************** LAYOUT ****************/
 
   .sectionwrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-/************** BURGER BØRN BILLEDER ****************/
-navbar ul li img {
-  visibility: visible;
-  width: 100%;
-}
 
-navbar ul li:first-child{
-  display: flex;
-}
-navbar ul li:first-child img{
-  width: 5rem;
-}
-
-navbar ul li:nth-child(2){
-  display: flex;
-}
-navbar ul li:nth-child(2) img{
-  width: 5rem;
-}
-
-navbar ul li:nth-child(3){
-  display: flex;
-}
-navbar ul li:nth-child(3) img{
-  width: 5rem;
-}
-
-navbar ul li:nth-child(4){
-  display: flex;
-}
-navbar ul li:nth-child(4) img{
-  width: 5rem;
-}
-
-navbar ul li:nth-child(5){
-  display: flex;
-}
-navbar ul li:nth-child(5) img{
-  width: 5rem;
-}
-
-nanavbarv ul li:last-child{
-  display: flex;
-}
-navbar ul li:last-child img{
-  width: 5rem; 
-}
-/************** BURGER BØRN END ****************/
-
-header navbar {
+  header navbar {
   padding: 40px;
-} 
+  } 
 
-navbar a {
-color: var(--blue);
-padding: 0px 10px;
-line-height: 3;
+  navbar a {
+  color: var(--blue);
+  padding: 0px 10px;
+  line-height: 3;
 
-}
+  }
+  /************** LAYOUT END ****************/
+  /************** BURGER BØRN BILLEDER ****************/
+  navbar ul li img {
+    visibility: visible;
+    width: 100%;
+  }
 
-.bla {
-  background-color: var(--blue);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
+  navbar ul li:first-child{
+    display: flex;
+  }
+  navbar ul li:first-child img{
+    width: 5rem;
+  }
 
-.hvid{
-  background-color: var(--white);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
+  navbar ul li:nth-child(2){
+    display: flex;
+  }
+  navbar ul li:nth-child(2) img{
+    width: 5rem;
+  }
 
-.navbarLinks li .bla a {
-  color: var(--white);
-}
-.navbar .navbarLinks li .bla a:hover {
-  color: var(--white);
-}
+  navbar ul li:nth-child(3){
+    display: flex;
+  }
+  navbar ul li:nth-child(3) img{
+    width: 5rem;
+  }
 
-.navcolor {
+  navbar ul li:nth-child(4){
+    display: flex;
+  }
+  navbar ul li:nth-child(4) img{
+    width: 5rem;
+  }
+
+  navbar ul li:nth-child(5){
+    display: flex;
+  }
+  navbar ul li:nth-child(5) img{
+    width: 5rem;
+  }
+
+  nanavbarv ul li:last-child{
+    display: flex;
+  }
+  navbar ul li:last-child img{
+    width: 5rem; 
+  }
+  /************** BURGER BØRN END ****************/
+  /************** NAVBAR ****************/
+  .bla {
+    background-color: var(--blue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .hvid{
     background-color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
   }
 
-.navcolor li a {
-    color: var(--blue);
+  .navbarLinks li .bla a {
+    color: var(--white);
   }
+  .navbar .navbarLinks li .bla a:hover {
+    color: var(--white);
+  }
+
+  .navcolor {
+      background-color: var(--white);
+    }
+
+  .navcolor li a {
+      color: var(--blue);
+    }
 
   .portfoliologo{
     margin-bottom: auto;
     display: block;
 
   }
-.knap {
-  display: flex;
-}
+  /************** NAVBAR END ****************/
+  /************** KNAP, SPIL & VIDEO ****************/
+  .knap {
+    display: flex;
+  }
 
-.sectioncolor_spil{
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  background-color: var(--blue);
-}
+  .sectioncolor_spil{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--blue);
+  }
 
-.spilwrapper{
-  margin: 0 auto;
-}
+  .spilwrapper{
+    margin: 0 auto;
+  }
 
-#iframe_spil{
-  border-width: 0;
-  border-style: none;
-  border-color: transparent;
-  border-image: none;
-  width: 100vh;
-  height: 450px;
-}
+  #iframe_spil{
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+    width: 100vh;
+    height: 450px;
+  }
+
+  .column_left_interview{
+    padding-right: 30px;
+  }
 
 }
-
+/************** KNAP, SPIL & VIDEO END  ****************/
+/************** CHARACTER WIDTH  ****************/
 @media (min-width: 1000px) {
   p{
     width: 60ch;
 }
-
-
-
+/************** CHARACTER WIDTH  ****************/
 }
 /************** MEDIA HELVEDE END ****************/
